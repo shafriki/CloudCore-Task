@@ -14,17 +14,17 @@ const Banner = () => {
                     className="h-full">
 
                     <SwiperSlide className="relative h-[400px]">
-                        <img src="https://i.ibb.co.com/rwtxS03/1.png"
+                        <img src="https://i.ibb.co.com/sphvzMzP/banner-1-1.png"
                             alt="Slide 1" className="w-full h-full object-cover"/>
                     </SwiperSlide>
 
                     <SwiperSlide className="relative h-[400px]">
-                        <img src="https://i.ibb.co.com/S58mLnF/pd-2.png" alt="Slide 2"
+                        <img src="https://i.ibb.co.com/PZsMnVY8/banner-2-1.png" alt="Slide 2"
                             className="w-full h-full object-cover"/>
                     </SwiperSlide>
 
                     <SwiperSlide className="relative h-[400px]">
-                        <img src="https://i.ibb.co.com/Snphfnw/pd-1.png"
+                        <img src="https://i.ibb.co.com/Mr66Hhn/Banner-3-1.png"
                             alt="Slide 3" className="w-full h-full object-cover"/>
                     </SwiperSlide>
                 </Swiper>
@@ -34,3 +34,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

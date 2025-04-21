@@ -12,10 +12,10 @@ const BannerCompo = () => {
 
             {/* two images */}
             <div className="md:col-span-1 flex flex-row md:flex-col gap-[1px] md:gap-1">
-                <img src="https://i.ibb.co.com/58vtr8L/s-2.png"alt="Banner Image 1"
+                <img src="https://i.ibb.co.com/v6bFBsrv/asside-1.png"alt="Banner Image 1"
                     className="w-1/2 md:w-full object-cover "/>
                     
-                <img src="https://i.ibb.co.com/StDStdY/s-1.png" alt="Banner Image 2" className="w-1/2 md:w-full  object-cover"/>
+                <img src="https://i.ibb.co.com/ZpzyZJ5W/asside-1-1.png" alt="Banner Image 2" className="w-1/2 md:w-full  object-cover"/>
             </div>
         </div>
     );
