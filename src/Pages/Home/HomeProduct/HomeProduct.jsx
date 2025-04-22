@@ -35,7 +35,9 @@ const HomeProduct = () => {
     fetchProducts();
   }, [dispatch]);
 
-  if (loading) return <p className="text-center text-xl my-10">Loading products...</p>;
+  if (loading) return <div className="flex justify-center items-center h-screen">
+  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-rose-500"></div>
+</div>
   if (error) return <p className="text-center text-red-500 my-10">Error: {error}</p>;
 
   return (
