@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const HomeProduct = () => {
   const dispatch = useDispatch();
@@ -77,9 +78,10 @@ const HomeProduct = () => {
                   <div className="py-4 px-3">
                     <h2 className="text-lg text-center font-semibold mb-2">{product.name}</h2>
                     <p className="text-white text-center font-medium">৳{product.price}</p>
+                    <Link to={`/product-details/${product.id}`}>
                     <button className="btn rounded-none bg-white hover:bg-gray-400 shadow-none border-none text-gray-800 w-full mt-3">
                       View Product
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               </SwiperSlide>
