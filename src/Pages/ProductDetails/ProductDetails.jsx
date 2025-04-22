@@ -5,6 +5,7 @@ import { BiCategory } from "react-icons/bi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Swal from 'sweetalert2'; 
+import { FaCartPlus } from "react-icons/fa";
 
 const ProductDetails = () => {
   const { id } = useParams(); 
@@ -119,8 +120,7 @@ const ProductDetails = () => {
           <hr className="my-6" />
           
           <button onClick={() => Swal.fire({ icon: 'success', title: 'Added Successfully!', showConfirmButton: false,
-              timer: 1500})} className="btn w-full bg-rose-500 text-gray-50 hover:bg-rose-800 py-2 px-4 rounded">
-            Add to Cart
+              timer: 1500})} className="btn w-full bg-rose-500 text-gray-50 hover:bg-rose-800 py-2 px-4 rounded"><FaCartPlus className='inline-block'/>Add to Cart
           </button>
         </div>
       </div>
