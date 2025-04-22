@@ -25,7 +25,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     {/* Fixed NavLink usage */}
-                    <NavLink to="/" className=" text-blue-700 font-bold text-xl">
+                    <NavLink to="/" className=" text-blue-700 font-bold text-xs md:text-xl">
                         CloudCore Fashion
                     </NavLink>
                 </div>
