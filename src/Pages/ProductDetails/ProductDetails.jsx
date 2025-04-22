@@ -111,7 +111,7 @@ const ProductDetails = () => {
             </p>
           </div>
           <hr className="my-6" />
-          <button className="btn bg-rose-500 text-gray-50 hover:bg-rose-800 py-2 px-4 rounded">
+          <button className="btn w-full bg-rose-500 text-gray-50 hover:bg-rose-800 py-2 px-4 rounded">
             Add to Cart
           </button>
         </div>
