@@ -50,7 +50,7 @@ const AllProducts = () => {
             className="card mx-3 md:mx-0 group cursor-pointer rounded-none text-white bg-gray-100"
             data-aos="fade-up"
             data-aos-duration="800"
-            data-aos-delay={index * 100} // delay each card by 100ms more than the last
+            data-aos-delay={index * 100} 
           >
             <figure>
               <img

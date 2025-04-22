@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { BiCategory } from "react-icons/bi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Swal from 'sweetalert2'; // ✅ SweetAlert2 import
+import Swal from 'sweetalert2'; 
 
 const ProductDetails = () => {
   const { id } = useParams(); 
