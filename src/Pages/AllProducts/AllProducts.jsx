@@ -3,12 +3,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setProducts, setLoading, setError } from '../../redux/productSlice';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AllProducts = () => {
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector(state => state.product);
 
   useEffect(() => {
+    AOS.init({ once: true });
+
     const fetchProducts = async () => {
       try {
         dispatch(setLoading(true));
@@ -28,17 +32,26 @@ const AllProducts = () => {
     fetchProducts();
   }, [dispatch]);
 
-  if (loading) return <div className="flex justify-center items-center h-screen">
-  <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-rose-500"></div>
-</div>
+  if (loading) return (
+    <div className="flex justify-center items-center h-screen">
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-rose-500"></div>
+    </div>
+  );
+
   if (error) return <p className="text-center text-red-500 my-10">Error: {error}</p>;
 
   return (
     <div className="max-w-screen-xl mx-auto my-10">
       <h2 className="text-3xl font-bold text-center mb-10">All Products</h2>
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {products.map(product => (
-          <div key={product.id} className="card mx-3 md:mx-0 group cursor-pointer rounded-none text-white bg-gray-100 ">
+        {products.map((product, index) => (
+          <div
+            key={product.id}
+            className="card mx-3 md:mx-0 group cursor-pointer rounded-none text-white bg-gray-100"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay={index * 100} // delay each card by 100ms more than the last
+          >
             <figure>
               <img
                 src={`https://admin.refabry.com/storage/product/${product.image}`}
@@ -50,9 +63,9 @@ const AllProducts = () => {
               <h3 className="text-lg text-black font-semibold mb-1">{product.name}</h3>
               <p className="mb-2 text-black">৳{product.price}</p>
               <Link to={`/product-details/${product.id}`}>
-              <button className="btn w-full rounded-none bg-rose-500 text-gray-50 hover:bg-rose-800 border-none ">
-                View Product
-              </button>
+                <button className="btn w-full rounded-none bg-rose-500 text-gray-50 hover:bg-rose-800 border-none">
+                  View Product
+                </button>
               </Link>
             </div>
           </div>

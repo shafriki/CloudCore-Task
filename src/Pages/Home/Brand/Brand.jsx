@@ -12,22 +12,22 @@ const Brand = () => {
             <div className='flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0'>
 
                 {/* brand one */}
-                <div className='flex flex-col items-center space-y-5'>
-                    <img src={richman} alt="richman" className='w-80'/>
+                <div className='flex flex-col items-center space-y-5 group cursor-pointer'>
+                    <img src={richman} alt="richman" className='w-80 group-hover:scale-105 transition-all'/>
                     <img src={r} alt="logo" className='w-30'/>
                     <button className='btn bg-black text-white'>Explore now</button>
                 </div>
 
                 {/* brand two */}
-                <div className='flex flex-col items-center space-y-5'>
-                    <img src={oxyzen} alt="richman" className='w-80'/>
+                <div className='flex flex-col items-center space-y-5 group cursor-pointer'>
+                    <img src={oxyzen} alt="richman" className='w-80 group-hover:scale-105 transition-all'/>
                     <img src={o} alt="logo" className='w-30'/>
                     <button className='btn bg-black text-white'>Explore now</button>
                 </div>
 
                 {/* brand three */}
-                <div className='flex flex-col items-center space-y-5'>
-                    <img src={lubnan} alt="richman" className='w-80'/>
+                <div className='flex flex-col items-center space-y-5 group cursor-pointer'>
+                    <img src={lubnan} alt="richman" className='w-80 group-hover:scale-105 transition-all'/>
                     <img src={l} alt="logo" className='w-30'/>
                     <button className='btn bg-black text-white'>Explore now</button>
                 </div>
